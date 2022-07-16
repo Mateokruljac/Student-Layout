@@ -1,0 +1,23 @@
+
+<template >
+     <lightning-card title = "Users:">
+      <div id ="waiting" if:false={ready}>Loading</div>   
+      <div id ="display" if:true ={ready}>
+      <template for:each= {data}   for:item= "accounts">
+        <div key= {accounts.Id} >
+             <p style = "color:red" ><b>Name:</b> {accounts.Name}</p>
+             
+             <p><b>Type:</b> {accounts.Type}</p>
+             
+             <p><b>Industry:</b> {accounts.Industry}</p>
+             <p>----------------------------------</p> 
+            </div>
+        
+            
+            
+          </template>
+     </div>   
+
+     </lightning-card>   
+   
+</template>

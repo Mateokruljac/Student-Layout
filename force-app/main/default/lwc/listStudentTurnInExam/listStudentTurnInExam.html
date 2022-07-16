@@ -1,0 +1,21 @@
+
+<template >
+    <lightning-card title = "Student`s Exam:">
+    
+     <template for:each= {data}   for:item= "student">
+       <div key= {student.Id} >
+           <p><b>Student Full Name:</b> {student.Name}   {student.surname__c}</p>
+           <p><b>Subject:</b> {student.Exam_period__r.Name}</p>
+           <p><b>Date:</b> {student.Exam_period__r.Date_time__c}</p>
+           
+           <p>----------------------------------</p> 
+           
+        </div>
+           
+           
+         </template>
+  
+
+    </lightning-card>   
+  
+</template>

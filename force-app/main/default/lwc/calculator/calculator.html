@@ -1,0 +1,16 @@
+<template>
+    
+    
+    <lightning-card >
+    <h1><b>{title}</b></h1>    
+    <p>Dear {greeting}, you can sum numbers here.
+        Enter a maximum of two numbers.</p>
+     <lightning-input value = {firstnumber}  onchange = {handleChanges} name ="firstnumber" label ="First Number"></lightning-input>     
+     <lightning-input value = {secondnumber} onchange = {handleChanges} name ="secondnumber" label ="Second Number"></lightning-input>
+     <lightning-badge title="Sum" label = {resultA}>Sum:</lightning-badge><lightning-badge title ="Subsraction" label = {resultS}></lightning-badge>
+     <lightning-badge title ="Multiplication" label = {resultM}></lightning-badge><lightning-badge title = "Division" label = {resultD}></lightning-badge>
+</lightning-card>
+
+        
+        
+</template>

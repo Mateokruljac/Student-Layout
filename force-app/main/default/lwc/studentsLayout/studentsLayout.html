@@ -1,0 +1,12 @@
+<template>
+
+        <lightning-card  title="Student info">
+            <h1>Hi,                                         {greetings}!</h1>
+            <lightning-button label="New" slot="actions"></lightning-button>
+            <lightning-input class="slds-p-horizontal_small" name ="greetings" value = {greetings} 
+             onchange= {handleGreetingChoices} placeholder="Full Name"></lightning-input>
+          
+        </lightning-card>
+
+
+</template>

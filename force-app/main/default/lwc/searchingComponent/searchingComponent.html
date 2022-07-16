@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = "Search for Student:">
+        <div id ="waiting" if:false={ready}>Loading  <br> Comming soon...</div>   
+        <div id ="display" if:true ={ready}>       
+    <lightning-input type ="search" onchange={handleChange} 
+     class="slds-m-bottom_small"  value ={browse}></lightning-input>
+
+<template for:each={StudentList} for:item="StudentAcc"  >
+           <option key={StudentAcc.Id}>Full Name:  {StudentAcc.Name}   {Student.surname__c} 
+            <br>Subject: {StudentAcc.Exam_Period__r.Name}
+           </option>
+</template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title ="Student Account Creation">
+        <lightning-input label="Name" onchange={handleChange} class ="slds-m-bottom_x-small" ></lightning-input>
+        <lightning-input label="Surname" onchange={handleChange} class ="slds-m-bottom_x-small" ></lightning-input>
+        <lightning-input label="Email" onchange={handleChange} class ="slds-m-bottom_x-small" ></lightning-input>
+        <lightning-input label="Ems" onchange={handleChange} class ="slds-m-bottom_x-small" 
+        message-when-bad-input="EMSO is invalid. Verification code is not correct."></lightning-input>
+        <lightning-combobox
+            label="Select"
+            name = "Regular"
+            value={value}
+            placeholder="Select"
+            options={roleOptions}
+            onchange={pickHandle} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+        <lightning-input  id="Extra" class ="slds-m-bottom_x-small" style="display:none;"></lightning-input>
+        <br><br><br>
+        <lightning-button label ="Click" variant ="brand" onclick={create}></lightning-button>
+    </lightning-card>
+</template>
